@@ -25,6 +25,8 @@ namespace ClassLibrary.Models
         public int RevisionNumber { get; set; } = 0; // Auto-generated.
         public string Name { get { return Project; } }
         public string Customer { get; set; }
+        public string Program { get; set; }
+
         private string _project;
         public string Project { get { return _project; } set { _project = value; RaisePropertyChanged(() => Name); } }  // Isn't this really the RFQ Description?
         public string Quotator { get; set; }
