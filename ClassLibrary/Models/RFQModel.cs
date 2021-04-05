@@ -57,6 +57,7 @@ namespace ClassLibrary.Models
             //RFQNumberStr = "6001";
             RFQNumber = 6001;
             RevisionNumber = 0;
+            Program = "Bottle";
             Project = "5429-Cap";
             //QuoteRevision = "1";
 
