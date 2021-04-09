@@ -3,6 +3,7 @@ using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,15 +26,37 @@ namespace ClassLibrary.DataAccess
 
                 rfq.BDM = ws.Cell("O7").Value.ToString();
                 rfq.Customer = ws.Cell("G9").Value.ToString();
-                rfq.Project = ws.Cell("N9").Value.ToString();
+                rfq.Program = ws.Cell("N9").Value.ToString();
+                rfq.Project = ws.Cell("N11").Value.ToString();
             }
 
             Trace.WriteLine($"BDM: {rfq.BDM}");
         }
 
-        public static void CreateToolQuoteWorkbook()
+        public static void CreateToolQuoteWorkbook(RFQModel rfq, PartModel part, string destinationFolderPath = @"\\s-fs1-smdrv\mydocs$\Joshua.Meservey\Scott Wolf\Quoting App\")
         {
-            // Creates a Tool Quote workbook populated with RFQ data.
+            string sourceFilePath = @"\\s-fs1-smdrv\mydocs$\Joshua.Meservey\Scott Wolf\Quoting App\Simple Quote Worksheet - 2020-12-11.xlsx";
+
+            using (var wb = new XLWorkbook(sourceFilePath))
+            {
+                var ws = wb.Worksheet("RFQ Details");
+
+                ws.Cell("C10").Value = rfq.Customer;
+                ws.Cell("C11").Value = rfq.Project;
+                ws.Cell("C12").Value = part.Description;
+                ws.Cell("C13").Value = part.ItemNumber;
+                ws.Cell("C14").Value = part.RevisionNumber;
+                ws.Cell("C15").Value = part.Material;
+
+                wb.SaveAs(destinationFolderPath);
+            }
+
+            ProcessStartInfo info = new ProcessStartInfo();
+
+            info.FileName = destinationFolderPath;
+            info.UseShellExecute = true;
+
+            Process.Start(info);
         }
 
         public static void CreateQuoteReviewWorkbook()

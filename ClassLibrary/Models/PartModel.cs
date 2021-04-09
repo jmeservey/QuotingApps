@@ -9,6 +9,7 @@ namespace ClassLibrary.Models
 {
     public class PartModel : BindableBase
     {
+        public int ID { get; set; }
         public int ItemNumber { get; set; }
         public string PartNumber { get; set; }
         public string Name // This only exists to display a caption in the treeview in the RFQ View.
@@ -55,31 +56,43 @@ namespace ClassLibrary.Models
                 Picture = ImageToByteArray(value);
             } 
         }
-        public string DrawingNumber { get; set; }
-        public string RevisionNumber { get; set; }
-        public int Cavitation { get; set; }
-        public string MoldBase { get; set; }
-        public string FeedSystem { get; set; }
-        public string Gating { get; set; }
-        public string Actions { get; set; }
-        public string Warranty { get; set; }
-        public int? MoldPrice { get; set; }
-        public int? MoldLeadTime { get; set; }
-        public string Spares { get; set; }
-        public int? SparesPrice { get; set; }
-        public int? SparesLeadTime { get; set; }
-        public string ValidationFAI { get; set; }
-        public string ValidationCTQ { get; set; }
-        public int? ValidationPrice { get; set; }
-        public int? ValidationLeadTime { get; set; }
-        public string Gages { get; set; }
-        public int? GagesPrice { get; set; }
+        public string Finish_Texture { get; set; }  // Tool quote sheet.
+        public string EstimatedAnnualVolumes { get; set; }  // Tool quote sheet.
+        public string PressSize { get; set; }  // Tool quote sheet.
+        public int RJGSensorQty { get; set; }  // Tool quote sheet.
+        public string ToolClass { get; set; }  // Tool quote sheet.
+        public int SideActionQty { get; set; }  // Tool quote sheet.
+        public string SideActionType { get; set; }  // Tool quote sheet.
+        public string DrawingNumber { get; set; }  // Quote letter.
+        public string RevisionNumber { get; set; }  // Quote letter.
+        public int Cavitation { get; set; }  // Quote letter & Tool Quote sheet.
+        public string MoldBase { get; set; }  // Quote letter
+        public string FeedSystem { get; set; }  // Quote letter & Tool Quote Sheet.
+        public string Gating { get; set; }  // Is this the same thing as gate style on the tool quote sheet.
+        public string Actions { get; set; }  // Quote letter.
+        public string Warranty { get; set; }  // Quote letter & Tool Quote Sheet.
+        public int? MoldPrice { get; set; }  // Quote letter
+        public int? MoldLeadTime { get; set; }  // Quote letter
+        public string SparesPercent { get; set; }  // Tool quote sheet
+        public string EjectionType { get; set; }  // Tool quote sheet
+        public string ManifoldDropQty { get; set; }  // Tool quote sheet
+        public string BaseMaterial { get; set; }  // Tool Quote Sheet
+        public int? SparesPrice { get; set; }  // Quote letter
+        public int? SparesLeadTime { get; set; }  // Quote letter
+        public string ValidationFAI { get; set; }  // Quote letter
+        public string ValidationCTQ { get; set; }  // Quote letter
+        public int? ValidationPrice { get; set; }  // Quote letter
+        public int? ValidationLeadTime { get; set; }  // Quote letter
+        public string Gages { get; set; }  // Quote letter
+        public int? GagesPrice { get; set; }  // Quote letter
+        public string AdditionalNotes { get; set; }  // Tool Quote sheet.
         public int TotalPrice { get { return (MoldPrice ?? 0) + (SparesPrice ?? 0) + (ValidationPrice ?? 0) + (GagesPrice ?? 0); } }
         public List<QuotedQuantityModel> QuotedQuantities { get; set; } = new List<QuotedQuantityModel>();
+        public List<PartSubcategory> Subcatagories { get; set; }
 
         public PartModel()
         {
-
+            Subcatagories = InitializeSubcategories();
         }
 
         public PartModel(PartModel part)
@@ -96,12 +109,13 @@ namespace ClassLibrary.Models
             MoldPrice = part.MoldPrice;
             Image = part.Image;
             ValidationPrice = part.ValidationPrice;
-
+            Subcatagories = InitializeSubcategories();
             part.QuotedQuantities.ForEach(quotedQuantity => QuotedQuantities.Add(new QuotedQuantityModel(quotedQuantity)));
         }
         public PartModel(string description)
         {
             this.Description = description;
+            Subcatagories = InitializeSubcategories();
         }
         public static byte[] ImageToByteArray(Image imageIn)
         {
@@ -171,6 +185,33 @@ namespace ClassLibrary.Models
         {
             return Convert.FromBase64String(base64Image);
         }
+
+        public List<PartSubcategory> InitializeSubcategories()
+        {
+            List<string> categories = new List<string>() { "Tooling", "Validation", "Unit Price" };
+            List<PartSubcategory> subcategories = new List<PartSubcategory>();
+
+            foreach (var item in categories)
+            {
+                subcategories.Add(new PartSubcategory(this, item));
+            }
+
+            return subcategories;
+        }
+
+        public class PartSubcategory
+        {
+            public PartModel Part { get; set; }
+
+            public string Name { get; set; }
+
+            public PartSubcategory(PartModel part, string subcategory)
+            {
+                Part = part;
+                Name = subcategory;
+            }
+        }
+
     }
 
 }

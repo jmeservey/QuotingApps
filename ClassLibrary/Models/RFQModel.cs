@@ -1,5 +1,4 @@
 ﻿using DevExpress.Mvvm;
-using DevExpress.Utils.Base;
 using System;
 using System.Collections.ObjectModel;
 
@@ -7,6 +6,7 @@ namespace ClassLibrary.Models
 {
     public class RFQModel : BindableBase
     {
+        public int ID { get; set; }
         public string RFQNumberStr 
         { 
             get 
@@ -23,7 +23,7 @@ namespace ClassLibrary.Models
         } // Auto-generated.
         public int RFQNumber { get; set; }  // Auto-generated.
         public int RevisionNumber { get; set; } = 0; // Auto-generated.
-        public string Name { get { return Project; } }
+        public string Name { get { return Project; } } // This is strictly for the TreeView control on the RFQView control.
         public string Customer { get; set; }
         public string Program { get; set; }
 
@@ -43,8 +43,9 @@ namespace ClassLibrary.Models
         {
 
         }
-        public RFQModel(int rfqNumber)
+        public RFQModel(int rfqNumber, int id)
         {
+            ID = id;
             RFQNumber = rfqNumber;
             RevisionNumber = 0;
             DateCreated = DateTime.Today;
@@ -52,6 +53,7 @@ namespace ClassLibrary.Models
         }
         public RFQModel(string test)
         {
+            ID = 1;
             DateCreated = DateTime.Today;
             DateDue = DateTime.Today.AddDays(14);
             //RFQNumberStr = "6001";
@@ -96,6 +98,7 @@ namespace ClassLibrary.Models
 
         public RFQModel(RFQModel rfq)
         {
+            ID = rfq.ID + 1;
             DateCreated = rfq.DateCreated;
             DateDue = rfq.DateDue;
             RFQNumber = rfq.RFQNumber;

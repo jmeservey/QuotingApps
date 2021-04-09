@@ -3,7 +3,7 @@ using DevExpress.Mvvm;
 using System.Collections.ObjectModel;
 using System.Windows;
 
-namespace QuoteLetterAppWpf2
+namespace QuoteLetterAppWpf2.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
