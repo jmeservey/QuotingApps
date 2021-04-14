@@ -41,12 +41,37 @@ namespace ClassLibrary.DataAccess
             {
                 var ws = wb.Worksheet("RFQ Details");
 
+                // Part information.
+
                 ws.Cell("C10").Value = rfq.Customer;
                 ws.Cell("C11").Value = rfq.Project;
                 ws.Cell("C12").Value = part.Description;
                 ws.Cell("C13").Value = part.ItemNumber;
                 ws.Cell("C14").Value = part.RevisionNumber;
                 ws.Cell("C15").Value = part.Material;
+                ws.Cell("C16").Value = part.Finish_Texture;
+                ws.Cell("C17").Value = part.EstimatedAnnualVolumes;
+                ws.Cell("D17").Value = part.PressSize;
+
+                // Tool information.
+
+                ws.Cell("B20").Value = part.RJGSensorQty;
+                ws.Cell("C20").Value = part.Cavitation;
+                ws.Cell("D20").Value = part.ToolClass;
+
+                ws.Cell("B22").Value = part.SideActionQty;
+                ws.Cell("C22").Value = part.Gating;
+                ws.Cell("D22").Value = part.Warranty;
+
+                ws.Cell("B24").Value = part.SideActionType;
+                ws.Cell("C24").Value = part.FeedSystem;
+                ws.Cell("D24").Value = part.Spares;
+
+                ws.Cell("B26").Value = part.EjectionType;
+                ws.Cell("C26").Value = part.ManifoldDropsQty;
+                ws.Cell("D26").Value = part.BaseMaterial;
+
+                ws.Cell("B28").Value = part.AdditionalNotes;
 
                 wb.SaveAs(destinationFolderPath);
             }
@@ -57,6 +82,23 @@ namespace ClassLibrary.DataAccess
             info.UseShellExecute = true;
 
             Process.Start(info);
+        }
+
+        public static PartModel ReadToolQuoteWorkbook(string filePath)
+        {
+            PartModel part = new PartModel();
+
+            using (var wb = new XLWorkbook(filePath))
+            {
+                var ws = wb.Worksheet("Quote Letter");
+
+                part.ToolBuildCost = ws.Cell("H44").GetValue<int>();
+                part.SpareCost = ws.Cell("K44").GetValue<int>();
+                //part.ManifoldCost = (int)ws.Cell("??").Value;
+                //part.MiscCost = (int)ws.Cell("??").Value;
+            }
+
+            return part;
         }
 
         public static void CreateQuoteReviewWorkbook()

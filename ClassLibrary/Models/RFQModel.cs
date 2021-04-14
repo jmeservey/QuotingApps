@@ -25,6 +25,14 @@ namespace ClassLibrary.Models
         public int RevisionNumber { get; set; } = 0; // Auto-generated.
         public string Name { get { return Project; } } // This is strictly for the TreeView control on the RFQView control.
         public string Customer { get; set; }
+        public string CustomerLocation { get; set; }
+        public string ManufacturingLocation { get; set; }
+        public DateTime DateReceived { get; set; }
+        public DateTime OriginalDueDateToBDM { get; set; }
+        public DateTime AdjustedDueDate { get; set; }
+        public DateTime ToSalesDate { get; set; }
+        public int NumberOfParts { get; set; }
+        public string Comments { get; set; }
         public string Program { get; set; }
 
         private string _project;
@@ -32,6 +40,7 @@ namespace ClassLibrary.Models
         public string Quotator { get; set; }
         public string BDM { get; set; }
         public string Status { get; set; }
+        public string SubmitType { get; set; }
         public int PercentComplete { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateDue { get; set; }

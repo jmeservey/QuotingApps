@@ -57,13 +57,13 @@ namespace ClassLibrary.Models
             } 
         }
         public string Finish_Texture { get; set; }  // Tool quote sheet.
-        public string EstimatedAnnualVolumes { get; set; }  // Tool quote sheet.
+        public int EstimatedAnnualVolumes { get; set; }  // Tool quote sheet.
         public string PressSize { get; set; }  // Tool quote sheet.
         public int RJGSensorQty { get; set; }  // Tool quote sheet.
         public string ToolClass { get; set; }  // Tool quote sheet.
         public int SideActionQty { get; set; }  // Tool quote sheet.
         public string SideActionType { get; set; }  // Tool quote sheet.
-        public string DrawingNumber { get; set; }  // Quote letter.
+        public string DrawingNumber { get; set; }  // Quote letter. Can also be called Print Number depending on the customer.
         public string RevisionNumber { get; set; }  // Quote letter.
         public int Cavitation { get; set; }  // Quote letter & Tool Quote sheet.
         public string MoldBase { get; set; }  // Quote letter
@@ -71,14 +71,18 @@ namespace ClassLibrary.Models
         public string Gating { get; set; }  // Is this the same thing as gate style on the tool quote sheet.
         public string Actions { get; set; }  // Quote letter.
         public string Warranty { get; set; }  // Quote letter & Tool Quote Sheet.
+        public int ToolBuildCost { get; set; } // From Tool Quote Sheet.
+        public int SpareCost { get; set; }  // From Tool Quote Sheet.
+        public int ManifoldCost { get; set; } // From Tool Quote Sheet.
+        public int MiscCost { get; set; }  // From Tool Quote sheet.
         public int? MoldPrice { get; set; }  // Quote letter
         public int? MoldLeadTime { get; set; }  // Quote letter
-        public string SparesPercent { get; set; }  // Tool quote sheet
-        public string EjectionType { get; set; }  // Tool quote sheet
-        public string ManifoldDropQty { get; set; }  // Tool quote sheet
-        public string BaseMaterial { get; set; }  // Tool Quote Sheet
+        public string Spares { get; set; }  // Tool quote sheet
         public int? SparesPrice { get; set; }  // Quote letter
         public int? SparesLeadTime { get; set; }  // Quote letter
+        public string EjectionType { get; set; }  // Tool quote sheet
+        public string ManifoldDropsQty { get; set; }  // Tool quote sheet
+        public string BaseMaterial { get; set; }  // Tool Quote Sheet
         public string ValidationFAI { get; set; }  // Quote letter
         public string ValidationCTQ { get; set; }  // Quote letter
         public int? ValidationPrice { get; set; }  // Quote letter
@@ -86,6 +90,7 @@ namespace ClassLibrary.Models
         public string Gages { get; set; }  // Quote letter
         public int? GagesPrice { get; set; }  // Quote letter
         public string AdditionalNotes { get; set; }  // Tool Quote sheet.
+        public string ToolQuoteFilePath { get; set; }
         public int TotalPrice { get { return (MoldPrice ?? 0) + (SparesPrice ?? 0) + (ValidationPrice ?? 0) + (GagesPrice ?? 0); } }
         public List<QuotedQuantityModel> QuotedQuantities { get; set; } = new List<QuotedQuantityModel>();
         public List<PartSubcategory> Subcatagories { get; set; }
