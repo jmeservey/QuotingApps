@@ -58,7 +58,8 @@ namespace ClassLibrary.Models
         }
         public string Finish_Texture { get; set; }  // Tool quote sheet.
         public int EstimatedAnnualVolumes { get; set; }  // Tool quote sheet.
-        public string PressSize { get; set; }  // Tool quote sheet.
+        public int PressSize { get; set; }  // Tool quote sheet.
+        public string PressSizeStr { get; set; }  // Tool quote sheet.
         public int RJGSensorQty { get; set; }  // Tool quote sheet.
         public string ToolClass { get; set; }  // Tool quote sheet.
         public int SideActionQty { get; set; }  // Tool quote sheet.
@@ -71,11 +72,24 @@ namespace ClassLibrary.Models
         public string Gating { get; set; }  // Is this the same thing as gate style on the tool quote sheet.
         public string Actions { get; set; }  // Quote letter.
         public string Warranty { get; set; }  // Quote letter & Tool Quote Sheet.
+        public int DesignCost { get; set; }  // From Tool Quote Sheet.
+        public int DesignMarkup { get; set; }  // Tooling Panel.
+        public int DesignPrice { get; set; }  // Tooling Panel.
         public int ToolBuildCost { get; set; } // From Tool Quote Sheet.
+        public int ToolBuildMarkup { get; set; }  // Tooling Panel.
+        public int ToolBuildPrice { get; set; }  // Tooling panel.
         public int SpareCost { get; set; }  // From Tool Quote Sheet.
+        public int SpareMarkup { get; set; } // Tooling panel.
+        public int SparePrice { get; set; } // Tooling panel.
         public int ManifoldCost { get; set; } // From Tool Quote Sheet.
+        public int ManifoldMarkup { get; set; }  // Tooling panel.
+        public int ManifoldPrice { get; set; }  // Tooling panel.
         public int MiscCost { get; set; }  // From Tool Quote sheet.
+        public int MiscMarkup { get; set; }  // Tooling panel.
+        public int MiscPrice { get; set; }  // Tooling panel.
+        public int MoldCost { get { return (DesignCost + ToolBuildCost + SpareCost + ManifoldCost + MiscCost); } } // 
         public int? MoldPrice { get; set; }  // Quote letter
+        public int? MoldMarkup { get; set; }  // ToolingPanel
         public int? MoldLeadTime { get; set; }  // Quote letter
         public string Spares { get; set; }  // Tool quote sheet
         public int? SparesPrice { get; set; }  // Quote letter
@@ -91,6 +105,19 @@ namespace ClassLibrary.Models
         public int? GagesPrice { get; set; }  // Quote letter
         public string AdditionalNotes { get; set; }  // Tool Quote sheet.
         public string ToolQuoteFilePath { get; set; }
+        public int StartUpHours { get; set; } // Unit price panel
+        public int NumberOfLaborers { get; set; }  // Unit price panel
+        public int CycleTime { get; set; } // Unit Price Panel
+        public int MaterialCost { get; set; } // Unit Price Panel
+        public int ScrapPercent { get; set; }  // Unit Price Panel
+        public int EfficiencyPercent { get; set; }  // Unit price panel
+        public string ManufacturingLocation { get; set; }  // Unit price panel
+        public double LaborRate { get; set; }  // Unit price panel
+        public double MachineRate { get; set; } // Unit price panel
+        public double StartUpRate { get; set; } // Unit price panel
+        public double PartWeight { get; set; } // Unit price panel
+        public double RunnerWeight { get; set; } // Unit price panel  This includes the sprue.
+        public int Markup { get; set; } = 30; // Unit price panel.
         public int TotalPrice { get { return (MoldPrice ?? 0) + (SparesPrice ?? 0) + (ValidationPrice ?? 0) + (GagesPrice ?? 0); } }
         public List<QuotedQuantityModel> QuotedQuantities { get; set; } = new List<QuotedQuantityModel>();
         public List<PartSubcategory> Subcatagories { get; set; }

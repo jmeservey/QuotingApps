@@ -51,7 +51,7 @@ namespace ClassLibrary.DataAccess
                 ws.Cell("C15").Value = part.Material;
                 ws.Cell("C16").Value = part.Finish_Texture;
                 ws.Cell("C17").Value = part.EstimatedAnnualVolumes;
-                ws.Cell("D17").Value = part.PressSize;
+                ws.Cell("D17").Value = part.PressSizeStr;
 
                 // Tool information.
 
@@ -90,12 +90,13 @@ namespace ClassLibrary.DataAccess
 
             using (var wb = new XLWorkbook(filePath))
             {
-                var ws = wb.Worksheet("Quote Letter");
+                var ws1 = wb.Worksheet("Quote Worksheet");
+                var ws2 = wb.Worksheet("Quote Letter");
 
-                part.ToolBuildCost = ws.Cell("H44").GetValue<int>();
-                part.SpareCost = ws.Cell("K44").GetValue<int>();
-                //part.ManifoldCost = (int)ws.Cell("??").Value;
-                //part.MiscCost = (int)ws.Cell("??").Value;
+                part.DesignCost = ws1.Cell("H18").GetValue<int>() * ws1.Cell("C88").GetValue<int>();  // Multiplies Design Hours by the Shop rate specified in cell C88 to determine design cost.
+                part.ToolBuildCost = ws2.Cell("H44").GetValue<int>();
+                part.SpareCost = ws2.Cell("K44").GetValue<int>();
+                part.ManifoldCost = ws1.Cell("H5").GetValue<int>();
             }
 
             return part;

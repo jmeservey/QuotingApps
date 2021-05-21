@@ -787,6 +787,7 @@ namespace ClassLibrary.Reports
             // 
             this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(94.65622F, 0F);
             this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ReportSource = new ClassLibrary.Reports.QuotedQuantityXtraReport();
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(238.28F, 20.83333F);
             this.xrSubreport1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrSubreport1_BeforePrint);
             // 
