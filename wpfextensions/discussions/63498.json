@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "215934",
+    "ThreadId": "63498",
+    "Html": "<p>Hi,</p>\r\n<p>I just found your ZoomControl and I'm so excited, it's exactly what I've been looking for. However, I can't seem to get it to work.</p>\r\n<p>I've added the following XAML to my project:</p>\r\n<p>&nbsp;</p>\r\n<pre>        \r\n</pre>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>        <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">wpfx</span><span style=\"color:Blue\">:</span><span style=\"color:#A31515\">ZoomControl</span> <span style=\"color:Red\">x:Name</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">Zoomer</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n            <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">StackPanel</span> \r\n                <span style=\"color:Red\">x:Name</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">SwimlaneContainer</span><span style=\"color:Black\">&quot;</span> \r\n                <span style=\"color:Red\">Margin</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">0,11,0,0</span><span style=\"color:Black\">&quot;</span>\r\n                <span style=\"color:Red\">Height</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">800</span><span style=\"color:Black\">&quot;</span>\r\n                <span style=\"color:Red\">Width</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">780</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n                <span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">StackPanel</span><span style=\"color:Blue\">&gt;</span>\r\n        <span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">wpfx</span><span style=\"color:Blue\">:</span><span style=\"color:#A31515\">ZoomControl</span><span style=\"color:Blue\">&gt;</span>\r\n\r\n</pre>\r\n</div>\r\n<p>The contents of the &quot;SwimlaneContainer&quot; are populated later at runtime (which I think may be a source of the problem). When I run my application I can see your control. However, once I've added some controls to the &quot;SwimlaneContainer&quot;, nothing appears. If I revert back to my previous code (which uses a scroller in-place of the ZoomControl), things display as I'd expect.</p>\r\n<p>Any help is greatly appreciated.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-24T20:31:53.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "244917",
+    "ThreadId": "63498",
+    "Html": "<p>I have the same problem with the graphsharp component: it doesn't display in the zoom control.</p>\r\n<p>Maybe it's because I took the latest source code version, instead of the latest stable download...</p>",
+    "PostedDate": "2009-10-12T23:07:23.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

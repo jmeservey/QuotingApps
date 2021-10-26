@@ -1,0 +1,142 @@
+[
+  {
+    "Id": "36479",
+    "Title": "Feature requests",
+    "LatestDate": "2008-09-25T08:55:11.23-07:00"
+  },
+  {
+    "Id": "58147",
+    "Title": "One property more",
+    "LatestDate": "2010-08-30T09:20:46.797-07:00"
+  },
+  {
+    "Id": "63498",
+    "Title": "Content of ZoomControl doesn't display",
+    "LatestDate": "2009-10-12T23:07:23.75-07:00"
+  },
+  {
+    "Id": "63829",
+    "Title": "Why is the zoom-out so much faster than the zoom-in?",
+    "LatestDate": "2009-07-29T06:18:05.29-07:00"
+  },
+  {
+    "Id": "68766",
+    "Title": "ZoomControl  - FocusedItem property",
+    "LatestDate": "2009-09-13T02:38:50.417-07:00"
+  },
+  {
+    "Id": "71936",
+    "Title": "Multiple ZoomControls in one window",
+    "LatestDate": "2010-12-08T01:47:46.233-08:00"
+  },
+  {
+    "Id": "72520",
+    "Title": "EqualityToBooleanConverter exception at design time",
+    "LatestDate": "2009-10-20T03:13:32.067-07:00"
+  },
+  {
+    "Id": "77095",
+    "Title": "Zoom: Jagged resizing, image disappears when using slider.",
+    "LatestDate": "2011-11-29T03:28:28.54-08:00"
+  },
+  {
+    "Id": "83891",
+    "Title": "ZoomControl - controller position",
+    "LatestDate": "2010-02-16T03:26:03.947-08:00"
+  },
+  {
+    "Id": "208978",
+    "Title": "Symbol/source server for official WPF Extensions binaries",
+    "LatestDate": "2010-04-11T12:35:09.453-07:00"
+  },
+  {
+    "Id": "211091",
+    "Title": "DragBehaviour usage in code",
+    "LatestDate": "2010-08-30T09:25:09.853-07:00"
+  },
+  {
+    "Id": "212900",
+    "Title": "GetCoercedTranslate",
+    "LatestDate": "2010-05-17T07:26:26.553-07:00"
+  },
+  {
+    "Id": "221829",
+    "Title": "Add ScrollViewer support",
+    "LatestDate": "2010-07-29T04:43:22.593-07:00"
+  },
+  {
+    "Id": "224602",
+    "Title": "Add Rotate capability",
+    "LatestDate": "2012-11-18T23:22:29.82-08:00"
+  },
+  {
+    "Id": "225312",
+    "Title": "Add snap-to-x functionality",
+    "LatestDate": "2010-08-30T09:44:50.05-07:00"
+  },
+  {
+    "Id": "240285",
+    "Title": "ZoomControl : How to set Default Zoom to 1:1",
+    "LatestDate": "2011-01-03T09:10:40.577-08:00"
+  },
+  {
+    "Id": "266210",
+    "Title": "Multi-touch interaction support",
+    "LatestDate": "2011-08-12T02:14:26.687-07:00"
+  },
+  {
+    "Id": "266342",
+    "Title": "ZoomControl- limit pan to container",
+    "LatestDate": "2011-08-01T00:41:56.45-07:00"
+  },
+  {
+    "Id": "266588",
+    "Title": "Zooming exact coordinates",
+    "LatestDate": "2011-08-01T00:35:16.78-07:00"
+  },
+  {
+    "Id": "281149",
+    "Title": "Zooming with slider is wrong",
+    "LatestDate": "2011-11-29T07:20:27.28-08:00"
+  },
+  {
+    "Id": "281157",
+    "Title": "Option to limit movement of the controls' content?",
+    "LatestDate": "2011-11-29T03:38:16.967-08:00"
+  },
+  {
+    "Id": "295698",
+    "Title": "Error! Can anyone help?",
+    "LatestDate": "2012-02-06T07:07:27.407-08:00"
+  },
+  {
+    "Id": "351050",
+    "Title": "Zoomcontrol: Fix content-position/disable drag&drop",
+    "LatestDate": "2012-04-03T10:10:24.327-07:00"
+  },
+  {
+    "Id": "392432",
+    "Title": "Zoom Control for ItemsControl",
+    "LatestDate": "2012-08-21T00:45:20.843-07:00"
+  },
+  {
+    "Id": "435164",
+    "Title": "Implementing ISCrollInfo for WPFExtension's ZoomControl. Calculating Offsets",
+    "LatestDate": "2013-03-03T00:56:30.113-08:00"
+  },
+  {
+    "Id": "443717",
+    "Title": "ZoomControl and Adorners",
+    "LatestDate": "2013-05-15T04:43:57.847-07:00"
+  },
+  {
+    "Id": "641003",
+    "Title": "How can I retrieve the real position in ZoomControl when the zoom is not 1.0?",
+    "LatestDate": "2015-07-07T00:43:59.697-07:00"
+  },
+  {
+    "Id": "650382",
+    "Title": "How do I install this?",
+    "LatestDate": "2016-01-22T17:03:26.217-08:00"
+  }
+]

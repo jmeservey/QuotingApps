@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "646107",
+    "ThreadId": "266210",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I want to extend zoom interactions with multi-touch interaction in win 7 touch based devices like microsoft surface or other &nbsp;windows 7 based touch devices.</p>\r\n<p>How should I start to do that ? Do I need to code all the&nbsp;layout generation code to support&nbsp;mufti-touch interaction or just improving the methods with events ?</p>\r\n<p>&nbsp;</p>\r\n<p>Any advice to start will be highly appreciated.</p>\r\n",
+    "PostedDate": "2011-07-22T06:18:20.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "657027",
+    "ThreadId": "266210",
+    "Html": "<p>Hi there,</p>\r\n<p>any news on this topic? Having the same problem, any help would be appreciated!</p>\r\n<p>&nbsp;</p>\r\n<p>Greeting,<br />mast</p>",
+    "PostedDate": "2011-08-12T02:14:26.687-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

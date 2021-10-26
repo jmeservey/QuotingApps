@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "It has been implemented a while ago.",
+    "ClosedDate": "2009-04-28T05:06:22.623-07:00",
+    "CommentCount": 0,
+    "Custom": "",
+    "Description": "4 Property needed:\n\nCommandActivationTrigger (Enter, Focus, Unfocus)\nCommand\nCommandParameter\nCommandTarget",
+    "LastUpdatedDate": "2009-04-28T05:06:22.623-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "wpfextensions",
+    "ReportedDate": "2009-01-07T15:48:55.743-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Attached Behaviours - TextBox Command Support",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 0,
+    "Id": 1367
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

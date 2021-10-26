@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1043818",
+    "ThreadId": "443717",
+    "Html": "I hope I get it right. I am using the ZoomControl from WPF Extensions to display an image with pan and zoom support:<br />\n<pre><code>&lt;DockPanel Grid.Row=&quot;1&quot; x:Name=&quot;canvas&quot;&gt;            \n     &lt;Controls:ZoomControl  x:Name=&quot;zoomControl&quot;&gt;  \n        &lt;Canvas x:Name=&quot;canvas&quot;&gt;     \n             &lt;Image x:Name=&quot;imageControl&quot; Stretch=&quot;None&quot; /&gt;\n        &lt;/Canvas&gt; \n     &lt;/Controls:ZoomControl&gt;\n&lt;/DockPanel&gt;</code></pre>\n\nWhen the user selects an image with a bowse dialog, I load that image like so:<br />\n<br />\n  bmp = new BitmapImage(new Uri(fileName));<br />\n  this.imageControul.Source = bmp;<br />\n<br />\nI would like to added rectangles\\adorners to specific locations (pixel coordinates) on the image the user loaded based on some image processing.<br />\n<pre><code>// x,y,width,height are obtained from image processing and are in pixels\nvar r = new Rectangle();\n r.StrokeThickness = 5;\n r.Stroke = Brushes.Black;\n r.Fill = Brushes.Transparent;\n r.Width = width;\n r.Height = height;\n\n Canvas.SetLeft(r, y);\n Canvas.SetTop(r, x);\n\n canvas.Children.Add(r);</code></pre>\n\nHowever, the rectangles are not placed in the expected locations? They are the wrong scale and location. How can I translate image pixel coordinates to units I can use in this application<br />\n<br />\nThanks,<br />\n<br />\nJohn<br />\n",
+    "PostedDate": "2013-05-15T04:43:57.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

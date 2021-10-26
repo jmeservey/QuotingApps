@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": "",
+    "Description": "For some reason the ZoomControl cannot be used in .NET 4. (KeyNotFoundException during xaml parsing, seems to be related to styles.)\n\nDon't know if this is a bug the beta, or a broken assumption from ZoomControl.",
+    "LastUpdatedDate": "2010-11-09T10:31:06.853-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfextensions",
+    "ReportedDate": "2009-06-27T11:05:09.293-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ZoomControl crashes in .NET 4 beta",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3364
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "When I compile the library and samples application under .Net 4 I get a \"Key cannot be null exception\".  Is there likely to be a release of the library that works with .Net 4 in the near future, or should I look for alternatives (or roll my own)?\r\n\r\nThanks",
+      "PostedDate": "2009-09-16T11:39:42.523-07:00",
+      "Id": 61206
+    },
+    {
+      "Message": "I get a similar crash if I have multiple zoom controls in my wpf control.",
+      "PostedDate": "2010-11-09T10:31:06.853-08:00",
+      "Id": 61207
+    }
+  ]
+}

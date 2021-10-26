@@ -1,0 +1,17 @@
+<div class="wikidoc"><h1>DragBehaviour Sample</h1>
+Via the DragBehaviour you can modify the position (any kind of position, in the sample below we modify the Canvas.Left, Canvas.Top, but you can bind anything to these properties} of any FrameworkElement or FrameworkContentElement.<br /><br /><pre>
+&lt;Window ...
+    xmlns:extbehaviour=&quot;clr-namespace:WPFExtensions.AttachedBehaviours;assembly=WPFExtensions&quot;
+    ...&gt;
+    &lt;Canvas&gt;
+        &lt;Label Content=&quot;Hello, I&#39;m Draggable&quot; 
+               extbehaviour:DragBehaviour.IsDragEnabled=&quot;True&quot; 
+               extbehaviour:DragBehaviour.X=&quot;{Binding RelativeSource={RelativeSource self},Path=(Canvas.Left),Mode=TwoWay}&quot;
+               extbehaviour:DragBehaviour.Y=&quot;{Binding RelativeSource={RelativeSource self},Path=(Canvas.Top),Mode=TwoWay}&quot;
+               Canvas.Left=&quot;0&quot;
+               Canvas.Top=&quot;50&quot;&gt;
+        &lt;/Label&gt;
+        &lt;Label Content=&quot;Sorry, I&#39;m not&quot;/&gt;
+    &lt;/Canvas&gt;
+&lt;/Window&gt;
+</pre></div><div class="ClearBoth"></div>

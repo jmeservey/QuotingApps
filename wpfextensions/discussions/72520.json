@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "247621",
+    "ThreadId": "72520",
+    "Html": "<p>Hi there</p>\r\n<p>First of all, nice work!</p>\r\n<p>When using the zoomcontrol I'm getting an EqualityConverter exception: &quot;It's false, I won't bind back&quot;.. I'm using expression blend 2008.</p>\r\n<p>Any idea of what might be causing this behavour?</p>\r\n<p>Regards,</p>\r\n<p>Fredrik</p>",
+    "PostedDate": "2009-10-20T03:13:32.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

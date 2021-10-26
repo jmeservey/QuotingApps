@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "429787",
+    "ThreadId": "208978",
+    "Html": "<p>Hi,</p>\r\n<p>I would like to tell you that we provided symbol and source support for WPF Extensions at http://www.symbolsource.org. This is a new project that aims at providing a public symbol and source server for widely used open source library projects. Currently our focus is on the .NET platform and tools supporting Microsoft's symsrv technology - Visual Studio, WinDbg and others.</p>\r\n<p>To se it you need to configure a symbol server the same way you do for the Reference Source server from Microsoft. Then you'll be able to debug WPF Extensions source code from within your own projects that use it. Instructions for configuring Visual Studio are provided on the website.</p>\r\n<p>We plan to provide support for any future versions of WPF Extensions. Our current support list will also expand as we add more projects to the server in the nearest future. We are also open to any suggestions.</p>\r\n<p>It would be great if information about this could get to the WPF Extensions project wiki pages or its download page.</p>\r\n<p>Visit us at http://www.symbolsource.org.</p>\r\n<p>Best regards,<br>Marcin Mikołajczak<br>Co-founder of SymbolSource.org<br>marcin.mikolajczak@symbolsource.org</p>",
+    "PostedDate": "2010-04-11T12:35:09.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

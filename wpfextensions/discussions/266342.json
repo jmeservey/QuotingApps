@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "646684",
+    "ThreadId": "266342",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>ZoomControl works great. One thing I'd like to do, is limit panning so that the control will not go totally out of view. Currently it is contained in a grid inside a UserControl. The User control is in a grid under the main page. Now when I use pan, with\r\n any zoom applied, I can take the control far to any direction until it disappears.</p>\r\n<p>Any help is appreciated.</p>\r\n<p>Yuv</p>\r\n",
+    "PostedDate": "2011-07-24T00:49:05.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650402",
+    "ThreadId": "266342",
+    "Html": "<p>You need to modify the code. You should limit the translateX and translateY properties, but it is really easy to do with dependency property coercing:&nbsp;<a href=\"http://msdn.microsoft.com/en-us/library/ms745795.aspx\">http://msdn.microsoft.com/en-us/library/ms745795.aspx</a></p>",
+    "PostedDate": "2011-08-01T00:41:56.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

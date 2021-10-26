@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": "",
+    "Description": "Hi,\n\nI hope you can help me on this one. I'm using the WPF Extensions toolkit, and it's a great piece of work. More precisely I'm using the zoomcontrol to show a map with some units on it (the units have the DragableBehavior attached)\n\nEverything was working fine, until yesterday were I was told to implement a new feature in our application - scaling of the units.\nIf I scale the units (which are UserControls) to under 50% the drag-behavior totally messed up. \n\nI can re-produce the error in your own test-application by putting in the following:\n\n<Rectangle.RenderTransform>\n                                        <ScaleTransform CenterX=\"0\" CenterY=\"0\" ScaleX=\"0.3\" ScaleY=\"0.3\" />\n                                    </Rectangle.RenderTransform>\n\nIn one of the Rectangles in the \"NEW ZoomControl\" tab.\n\nStart the project and try to drag the rectangle with the scaletransform. It will behave very strange and not as expected.\n\nI hope you can help me out here...\n\nThanks!\n\n/Mikkel",
+    "LastUpdatedDate": "2012-01-31T23:48:53.187-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfextensions",
+    "ReportedDate": "2012-01-30T06:38:40.177-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Problems when scaling items in the ZoomControl",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10263
+  },
+  "FileAttachments": [
+    {
+      "FileId": 364259,
+      "FileName": "DragBehaviour.cs",
+      "DownloadUrl": ".\\364259"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I figured this issue out my self with help from the guys on the MSDN forum:\r\nhttp://social.msdn.microsoft.com/Forums/en-US/wpf/thread/20c011c9-aaa2-4b31-ac9c-18f92c72135c\r\n\r\nI have attached a new implementation of the DragBehaviour class with the changes needed to get it working with scaled objects.\r\n\r\nFor more detailed information on the changes - see the MSDN thread above.\r\n\r\nKeep up the good work - it's a great toolkit you got here!\r\n\r\n/Mikkel",
+      "PostedDate": "2012-01-31T23:48:53.187-08:00",
+      "Id": 61208
+    }
+  ]
+}

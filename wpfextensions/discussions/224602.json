@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "483947",
+    "ThreadId": "224602",
+    "Html": "<p>I added RotateTransform into transformGroup, rotation work fine when I provide an angle to the control.</p>\r\n<p>The problem now is once i rotate from 0 degree, panning direction is not according to mouse move direction.</p>\r\n<p>Anybody successfully implement rotate capability without impact to panning?</p>\r\n<p>Thanks.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-23T22:47:00.77-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "484083",
+    "ThreadId": "224602",
+    "Html": "<p>Can you post some sample code of what you already have and that doesn't work?</p>\r\n<p>&nbsp;</p>\r\n<p>You may have to do a compound transform. This would involve doing a transform, rotation, then another transform. Hard to say though without some sample code.</p>",
+    "PostedDate": "2010-08-24T05:36:23.17-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "484451",
+    "ThreadId": "224602",
+    "Html": "<pre>Thanks for the respond.</pre>\r\n<pre>You means i need undo the rotation, do any others transform and lastly rotation again?</pre>\r\n<pre>See below for the lines of code that i added.</pre>\r\n<pre>rotateClockwiseBinding_Executed is called from a command.</pre>\r\n<pre><br></pre>\r\n<pre><span>private</span>&nbsp;<span>RotateTransform</span>&nbsp;_rotateTransform;<br></pre>\r\n<pre><span>protected</span>&nbsp;<span>ZoomContentPresenter</span>&nbsp;Presenter<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>get</span>&nbsp;{&nbsp;<span>return</span>&nbsp;_presenter;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>set</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_presenter&nbsp;=&nbsp;<span>value</span>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>if</span>&nbsp;(_presenter&nbsp;==&nbsp;<span>null</span>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>return</span>;<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>//add&nbsp;the&nbsp;ScaleTransform&nbsp;to&nbsp;the&nbsp;presenter</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_transformGroup&nbsp;=&nbsp;<span>new</span>&nbsp;<span>TransformGroup</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_scaleTransform&nbsp;=&nbsp;<span>new</span>&nbsp;<span>ScaleTransform</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_translateTransform&nbsp;=&nbsp;<span>new</span>&nbsp;<span>TranslateTransform</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_rotateTransform&nbsp;=&nbsp;<span>new</span>&nbsp;<span>RotateTransform</span>();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_transformGroup.Children.Add(_scaleTransform);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_transformGroup.Children.Add(_translateTransform);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color:#ff0000\"><em><strong>&nbsp;_transformGroup.Children.Add(_rotateTransform);</strong></em></span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_presenter.RenderTransform&nbsp;=&nbsp;_transformGroup;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_presenter.RenderTransformOrigin&nbsp;=&nbsp;<span>new</span>&nbsp;<span>Point</span>(0.5,&nbsp;0.5);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>\r\n<p>&nbsp;</p>\r\n<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>private</span>&nbsp;<span>static</span>&nbsp;<span>void</span>&nbsp;rotateClockwiseBinding_Executed(<span>object</span>&nbsp;sender,&nbsp;<span>ExecutedRoutedEventArgs</span>&nbsp;e)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>var</span>&nbsp;zc&nbsp;=&nbsp;(<span>ZoomControl</span>)sender;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>if</span>&nbsp;(zc._rotateTransform&nbsp;==&nbsp;<span>null</span>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>return</span>;<br><br></pre>\r\n<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zc._rotateTransform.Angle&nbsp;+=&nbsp;45;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</pre>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-24T19:18:10.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "484466",
+    "ThreadId": "224602",
+    "Html": "<p>I'm a little rusty on my transforms, but I think you want to apply the rotate before the transform.</p>",
+    "PostedDate": "2010-08-24T20:29:52.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "484982",
+    "ThreadId": "224602",
+    "Html": "<p>It work after i give the rotate before other transform.</p>\r\n<p>But i didn't really apply that way, instead, I figure out that i actually can give the rotateTransform to the content of the zoom control, so alway the content being rotate, but not the contentpresenter.</p>\r\n<p>It should not give any different, i think.</p>\r\n<p>thanks a lot for your comment and respond.. :-</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-25T23:56:43.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "943760",
+    "ThreadId": "224602",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I m also facing same Problem. After Rotate the Canvas, I m not able to actual coordinate to do zoom on that point.</p>\r\n<p>&nbsp;</p>\r\n<p>Hey&nbsp;<a href=\"http://www.codeplex.com/site/users/view/hmlim\">hmlim</a>, do you get any solution?</p>\r\n",
+    "PostedDate": "2012-11-18T23:22:29.82-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

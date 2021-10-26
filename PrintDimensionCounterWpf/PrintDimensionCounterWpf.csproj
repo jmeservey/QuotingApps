@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="\\s-fs1-smdrv\mydocs$\Joshua.Meservey\Visual Studio Code Samples\wpfextensions\sourceCode\wpfextensions\WPFExtensions\WPFExtensions\WPFExtensions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="My First Project-f1ddfcb27717.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

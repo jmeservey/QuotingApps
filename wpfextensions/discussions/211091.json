@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "437341",
+    "ThreadId": "211091",
+    "Html": "<p>I am creating a class that subclasses from UserControl. I want this class to have multi-controls and to have DragBehaviour out of the box. <br>Can you give me an example of how to use DragBehaviour via code and not XAML.</p>\r\n<p>For example I want to do the following:</p>\r\n<p>var X = new FooControl()</p>\r\n<p>and have drag and drop ready to go. Very new to WPF and any help would be great!</p>",
+    "PostedDate": "2010-04-29T15:48:24.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437704",
+    "ThreadId": "211091",
+    "Html": "<p>Looks like I answered my own question today. Once I learned about styles :) I just set the style of the type I want to have drag behavior.</p>\r\n<p>Nice library. Thanks!</p>",
+    "PostedDate": "2010-04-30T14:35:39.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "486488",
+    "ThreadId": "211091",
+    "Html": "<p>@mez, would you mind posting a sample of your code?</p>",
+    "PostedDate": "2010-08-30T09:25:09.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

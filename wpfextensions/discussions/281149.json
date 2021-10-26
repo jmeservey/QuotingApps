@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "704647",
+    "ThreadId": "281149",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I've placed the ZoomControl in my project, and performed some bindings to my Model (I'm using MVVM pattern)</p>\r\n<p>Here's the code for my binding:</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">Controls</span><span style=\"color:blue\">:</span><span style=\"color:#a31515\">ZoomControl</span> <span style=\"color:red\">Style</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{DynamicResource ZoomControlStyle1}</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">Background</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">#44433e</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">x:Name</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">zoomControl</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">Zoom</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{Binding MapModel.ZoomFactor, Mode=OneWayToSource}</span><span style=\"color:black\">&quot;</span> \r\n                          <span style=\"color:red\">TranslateX</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{Binding MapModel.CenterXLocation, Mode=OneWayToSource}</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">TranslateY</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{Binding MapModel.CenterYLocation, Mode=OneWayToSource}</span><span style=\"color:black\">&quot;</span>\r\n                          <span style=\"color:red\">MaxZoom</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{Binding MapModel.MaxZoom,Mode=OneTime}</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">MinZoom</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{Binding MapModel.MinZoom,Mode=OneTime}</span><span style=\"color:black\">&quot;</span> \r\n                          <span style=\"color:blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>The problem is that when I slide the zoom slider it zooms weirdly (not directly to the center of the current view, but it goes to one of the corners of the canvas), I suspected that maybe the TranslateX / TranslateY causes it, but only when I remove my Zoom\r\n binding it solves the problem (but causes other problems in my project)</p>\r\n<p>Did anyone ever encounter such thing? I would kill for a hint here...</p>\r\n<p>Thanks!<br>\r\nJohn.</p>\r\n",
+    "PostedDate": "2011-11-29T02:06:08.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "704727",
+    "ThreadId": "281149",
+    "Html": "<p>The binding mode for the Zoom property causes the problem. OneWayToSource mean that the zoom writes its value to the MapModel.ZoomFactor property. When setting the binding mode to OneWay, it's reading the property from MapModel.ZoomFactor, hence it will work.</p>\r\n<p>I'm not so sure I understand why this is happening, but I sure need to investigate this some more...</p>",
+    "PostedDate": "2011-11-29T05:48:22.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "704790",
+    "ThreadId": "281149",
+    "Html": "<p>OK, fixed my own problem - My MapModel.ZoomFactor was of type <strong>float</strong>&nbsp;and not <strong>double</strong>, so the loss of precision was causing the weird stuff I was seeing. Changing it to double fixed the problem.</p>",
+    "PostedDate": "2011-11-29T07:20:27.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

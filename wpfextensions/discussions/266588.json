@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "647679",
+    "ThreadId": "266588",
+    "Html": "\r\n<p>Hi everyone,&nbsp;</p>\r\n<p>I would like to zoom to the specific coordinates with a known ratio.</p>\r\n<p>In my method I got the coordinates either from touch or mouse, I write&nbsp;zoomControl.Zoom = 0.5; but it only zooms to the center.</p>\r\n<p>&nbsp;</p>\r\n<p>How should I make it to zoom specific coordinates ?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-07-26T05:19:19.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650398",
+    "ThreadId": "266588",
+    "Html": "<p>Modify the TranslateX and TranslateY properties too.</p>",
+    "PostedDate": "2011-08-01T00:35:16.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

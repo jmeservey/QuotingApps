@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "486497",
+    "ThreadId": "225312",
+    "Html": "<p>It would be really useful for me if the library provided snap-to functionality for draggable elements. For example, say we have an application with two Rectangles with IsDragEnabled=true. With snap-to, dragging either of those Rectangles close to each other would create a &quot;snap-to&quot; effect (a.k.a. &quot;magnetism&quot;) so that the Rectangles stick to each other's borders (within a certain range, say 10 pixels or so). It would also be useful to have the Rectangles snap to the edges of the container.</p>\r\n<p>I need to implement this functionality for a project I am working on anyway, and this library is the best and cleanest one I've found, so I'd love to be able to contribute to it. I am fairly new to WPF, but I am a quick learner and will be able to spend several hours a day for the next few weeks working on it. Let me know if anyone is interested in mentoring/working with me on this new feature.</p>\r\n<p>P.S. The project I am working on will probably make use of <a href=\"http://graphsharp.codeplex.com\">GraphSharp</a>, so maybe it would make more sense to work on that project. Still, I think &quot;snap-to&quot; functionality is elementary enough that it would be in an extensions library.</p>",
+    "PostedDate": "2010-08-30T09:44:50.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "234000",
+    "ThreadId": "68766",
+    "Html": "<p>I intend to do the underlined (I believe, you participated in graph#)</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>    <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">WpfExtension</span><span style=\"color:Blue\">:</span><span style=\"color:#A31515\">ZoomControl</span> <span style=\"text-decoration:underline\"><span style=\"color:Red\">FocusedItem</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{Binding ElementName=userControl1, Path=LastClickedVertex}</span></span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n        <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">graphsharp</span><span style=\"color:Blue\">:</span><span style=\"color:#A31515\">GraphLayout</span> <span style=\"color:Red\">Graph</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{Binding ElementName=userControl1,Path=BiddingGraph}</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n        <span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">graphsharp</span><span style=\"color:Blue\">:</span><span style=\"color:#A31515\">GraphLayout</span><span style=\"color:Blue\">&gt;</span>\r\n    <span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">WpfExtension</span><span style=\"color:Blue\">:</span><span style=\"color:#A31515\">ZoomControl</span><span style=\"color:Blue\">&gt;<br><br></span>Expected behavior of the ZoomControl is to change TranslateX, Y according to location of the focused control.<br>(little ZoomOut/ZoomIn animation would be nice - so it all looked like flying over googlemaps)<br>&nbsp;<br>Can I do this in the current WpfExtensions or is it a change request?<br><br>Matt<br></pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2009-09-13T02:38:50.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

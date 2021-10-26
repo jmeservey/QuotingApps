@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "288098",
+    "ThreadId": "83891",
+    "Html": "<p>Hi! Is there a way to move and resize the controller&nbsp;of a ZoomControl? With &quot;controller&quot; I mean the rectangle containing the +,-, fill, etc. controls.</p>\r\n<p>BTW: really, really great job!!!</p>",
+    "PostedDate": "2010-02-10T01:23:10.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290814",
+    "ThreadId": "83891",
+    "Html": "<p>Personally I copied the Skin/ResourceDictionary of the ZoomControl (from its source) to my own project, overwriting XAML stuff where needed.</p>",
+    "PostedDate": "2010-02-15T05:27:13.943-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291167",
+    "ThreadId": "83891",
+    "Html": "<p>Of course! Thanks!</p>",
+    "PostedDate": "2010-02-16T03:26:03.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

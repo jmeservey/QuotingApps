@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\n\r\nThank you very much for this simple an nice WPF extension.\r\nI found an issue on the RunCommand method:\r\n\r\nprivate void RunCommand()\r\n\t\t{\r\n\t\t\tvar command = GetCommand( Element );\r\n\t\t\tif ( command == null )\r\n\t\t\t\treturn;\r\n\r\n\t\t\tvar parameter = GetCommandParameter( Element );\r\n\t\t\tvar target = GetCommandTarget( Element ) ?? Element;\r\n\r\n\t\t\tif ( command is RoutedCommand )\r\n\t\t\t\t( (RoutedCommand)command ).Execute( parameter, target );\r\n\t\t\telse\r\n                command.Execute(target);\r\n\t\t}\r\n\r\nThe problem is that in the last line it should pass the parameter rather than the target variable:\r\nprivate void RunCommand()\r\n\t\t{\r\n\t\t\tvar command = GetCommand( Element );\r\n\t\t\tif ( command == null )\r\n\t\t\t\treturn;\r\n\r\n\t\t\tvar parameter = GetCommandParameter( Element );\r\n\t\t\tvar target = GetCommandTarget( Element ) ?? Element;\r\n\r\n\t\t\tif ( command is RoutedCommand )\r\n\t\t\t\t( (RoutedCommand)command ).Execute( parameter, target );\r\n\t\t\telse\r\n                command.Execute(parameter);\r\n\t\t}\r\n\r\nI hope this helps someone.\r\n\r\nThanks.\r\n",
+    "LastUpdatedDate": "2012-05-17T12:12:29.427-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfextensions",
+    "ReportedDate": "2012-05-17T12:12:29.427-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "RunCommand method issue",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10264
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

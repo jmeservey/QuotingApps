@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1433332",
+    "ThreadId": "641003",
+    "Html": "Hello<br />\n<br />\nI need to know the position when the mouse is clicked in the ZoomControl, to do this, I have added a double click event to a ZoomControl to show the position of the mouse. <br />\n<br />\nI do this to get the position:<br />\n<pre><code>void DoubleClick_(object sender, RoutedEventArgs e)\n{\n        var x = (this._mouseDownPos.X - (this.TranslateX));\n        var y = (this._mouseDownPos.Y - (this.TranslateY));\n\n        ...\n\n        // Draw a shape to position x and y\n}\n</code></pre>\n\nThis works well when the zoom is 1.0, but when the zoom is modified, these equations don't work. I see that ZoomControl has got a property called &quot;Zoom&quot; with the value of the zoom but I don't know how use it.<br />\n<br />\nKing Regards. Great library.<br />\n",
+    "PostedDate": "2015-07-07T00:43:59.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

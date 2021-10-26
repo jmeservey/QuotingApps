@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1367,
+    "Title": "Attached Behaviours - TextBox Command Support"
+  },
+  {
+    "Id": 3249,
+    "Title": "ZoomControl: VisualStudio WPF designer crashes"
+  },
+  {
+    "Id": 3364,
+    "Title": "ZoomControl crashes in .NET 4 beta"
+  },
+  {
+    "Id": 4643,
+    "Title": "WPF extensions don't work in VS Express Edition"
+  },
+  {
+    "Id": 10263,
+    "Title": "Problems when scaling items in the ZoomControl"
+  },
+  {
+    "Id": 10264,
+    "Title": "RunCommand method issue"
+  },
+  {
+    "Id": 10265,
+    "Title": "Memory Leak"
+  }
+]

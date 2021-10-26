@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "743170",
+    "ThreadId": "295698",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>I would like to add the ZoomControl to my WPF-Project but I got a error.</p>\r\n<p>My Project is based on .Net 3.5</p>\r\n<p>The declaration of the namespace:</p>\r\n<p>xmlns:zoom=&quot;clr-namespace:WPFExtensions.Controls;assembly=WPFExtensions&quot;</p>\r\n<p>Codepart:</p>\r\n<p>&lt;Grid&gt;<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &lt;zoom:ZoomControl&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>&lt;graphsharp:GraphLayout x:Name=&quot;graphLayout&quot;</p>\r\n<p><span style=\"white-space:pre\"></span>Graph=&quot;{Binding GraphToVisualize, ElementName=root}&quot;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>LayoutAlgorithmType=&quot;Tree&quot;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>OverlapRemovalAlgorithmType=&quot;FSA&quot;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>HighlightAlgorithmType=&quot;Simple&quot;/&gt;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>&lt;/zoom:ZoomControl&gt;</p>\r\n<p>&lt;/Grid&gt;</p>\r\n<p>Now I got the following error from VisualStudio 2010</p>\r\n<p><span>Error 1</span><span>&nbsp;</span><span>when setting</span><span>&nbsp;</span><span>the property &quot;</span><span>System.Windows.ResourceDictionary.DeferrableContent</span><span>&quot;</span><span>&nbsp;</span><span>was</span><span>&nbsp;</span><span>an exception.</span><span>&nbsp;</span></p>\r\n<p><span>Can anyone help please?</span></p>\r\n",
+    "PostedDate": "2012-02-06T07:07:27.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

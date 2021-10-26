@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": "",
+    "Description": "I am trying to load the solution in C# Express Edition 2008. While loading libraries the loading stops and prompts:\n\"Solutions folders are not supported in this version of the application. Solution foler \"Libraries\" will be displayed as unavailable\"",
+    "LastUpdatedDate": "2009-11-11T03:29:03.303-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "wpfextensions",
+    "ReportedDate": "2009-11-11T03:29:02.133-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "WPF extensions don't work in VS Express Edition",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 4643
+  },
+  "FileAttachments": [
+    {
+      "FileId": 364258,
+      "FileName": "VSExp.jpg",
+      "DownloadUrl": ".\\364258"
+    }
+  ],
+  "Comments": []
+}

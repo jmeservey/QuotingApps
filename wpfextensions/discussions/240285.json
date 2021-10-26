@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "543255",
+    "ThreadId": "240285",
+    "Html": "\r\n<p>How to set the default zoom factor of ZoomControl to 1:1 ?</p>\r\n<p>I want the zoom factor to be 1:1 on the loading of the control</p>\r\n<p>(as it would be if 1:1 is clicked).</p>\r\n<p>&nbsp;</p>\r\n<p>Is related with ZoomControlModes.Original ? How to set it programmatically ?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks and best regards.</p>\r\n<p>&nbsp;</p>\r\n<div id=\"x__mcePaste\" style=\"left:-10000px; top:0px; width:1px; height:1px; overflow:hidden\">\r\ns.guido@email.it</div>\r\n",
+    "PostedDate": "2011-01-03T09:10:40.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "245532",
+    "ThreadId": "71936",
+    "Html": "<p>I get an error when placing two seperate ZoomControls in one user control - is there a way to have two ZoomControls in one window?</p>\r\n<p>Thanks,</p>\r\n<p>Becky</p>",
+    "PostedDate": "2009-10-14T05:15:01.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245964",
+    "ThreadId": "71936",
+    "Html": "<p>Hi!</p>\r\n<p>Please be a little bit more specific. What type of error message do you get?</p>",
+    "PostedDate": "2009-10-15T04:10:01.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245994",
+    "ThreadId": "71936",
+    "Html": "<p>Hi, thanks for the reply.</p>\r\n<p>For example if I have a grid with two columns, and want a zoomcontrol in each column, I receive the error: EqualityToBooleanConverter: It's false, I won't bind back.</p>\r\n<p>Not sure why it doesn't like the second zoom control but I was hoping for a way to have them side by side in a grid and then drag contents between them.</p>\r\n<p>Thanks again,</p>\r\n<p>Becky</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-15T05:41:18.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "532762",
+    "ThreadId": "71936",
+    "Html": "\r\n<p>I'm also getting the same error with trying to nest a pair of zoom's - one with the other.</p>\r\n<p>did you find a work around/fix?</p>\r\n<p>the stack for the exception is 153 calls deep so i'm not sure i can debug it!</p>\r\n",
+    "PostedDate": "2010-12-08T01:47:46.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

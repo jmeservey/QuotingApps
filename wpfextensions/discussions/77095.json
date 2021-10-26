@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "263585",
+    "ThreadId": "77095",
+    "Html": "<p>Hi,</p>\r\n<p>I like your control alot, it's exactly what I'm looking for, however when using it in my app (a prism v2 mvvm type thing) the image resizes very jaggedly when using the mouse and using the slider makes the image disappear (it re-appears when slider is put back to original position, which is not necessarily 0 if the mouse-wheel has already resized).</p>\r\n<p>Currently trying to debug. Any ideas?</p>\r\n<p>Cheers</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-04T04:12:50.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "704677",
+    "ThreadId": "77095",
+    "Html": "<p>You're probably not placing your control correctly in a canvas or something, rather placing it directly in the ZoomControl.</p>\r\n<p>I've encountered a similar problem with this control in the past, and placing it all in a wrapping Canvas element (and that Canvas should be placed inside the ZoomControl) solved the problem.</p>\r\n<p>I'm guessing that since two years have passed since you first posted that question that you probably already solved it (I sure hope so :) ) but I'm answering anyway for others who might encounter that same problem.</p>\r\n<p>John</p>",
+    "PostedDate": "2011-11-29T03:28:28.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

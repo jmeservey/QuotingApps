@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1009424",
+    "ThreadId": "435164",
+    "Html": "I'm trying to implement IScrollInfo for WPFExtensions' ZoomControl in order to be able to use this control in combination with ScrollViewer. However I'm having difficulty understanding how to correctly calculate HorizontalOffset and VerticalOffset properties and where I need to update them .At first I suspected it was TranslateX and TranslateY but that only gives you the offset relative to the position of the content from the last time the Zoom property changed and not the global offset of the viewport.\r<br />\n<br />\nThis seems like a very common need for users of ZoomControl. Has this effort been done before?\r<br />\nWPFExtensions seems to be very poorly documented and not very self-explanatory, is there a good source of information to better understand how ZoomControl works?<br />\n",
+    "PostedDate": "2013-03-03T00:56:30.113-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
