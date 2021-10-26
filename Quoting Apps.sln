@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotingDocApp", "QuotingDoc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintDimensionCounterWpf", "PrintDimensionCounterWpf\PrintDimensionCounterWpf.csproj", "{80535A7A-9301-40DF-B2C9-9072929B46D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuoteLetterAppWPFNET5", "QuoteLetterAppWPF\QuoteLetterAppWPFNET5.csproj", "{A379A302-187A-464D-BFE6-60D4364F6DCD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportLibrary", "ReportLibrary\ReportLibrary.csproj", "{3BED8E71-B423-454A-8A8B-3D4B615F09C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteLetterAppWpf2", "QuoteLetterAppWpf2\QuoteLetterAppWpf2.csproj", "{19960C9F-D16B-4FC4-99DB-1D6942678537}"
@@ -49,10 +47,6 @@ Global
 		{80535A7A-9301-40DF-B2C9-9072929B46D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80535A7A-9301-40DF-B2C9-9072929B46D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80535A7A-9301-40DF-B2C9-9072929B46D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A379A302-187A-464D-BFE6-60D4364F6DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A379A302-187A-464D-BFE6-60D4364F6DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A379A302-187A-464D-BFE6-60D4364F6DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A379A302-187A-464D-BFE6-60D4364F6DCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3BED8E71-B423-454A-8A8B-3D4B615F09C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3BED8E71-B423-454A-8A8B-3D4B615F09C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BED8E71-B423-454A-8A8B-3D4B615F09C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
